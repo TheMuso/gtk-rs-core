@@ -3140,7 +3140,7 @@ impl<T: ObjectType> Watchable<T> for &T {
 // Validate that the given property value has an acceptable type for the given property pspec
 // and if necessary update the value
 #[track_caller]
-fn validate_property_type(
+pub fn validate_property_type(
     type_: Type,
     allow_construct_only: bool,
     pspec: &crate::ParamSpec,
